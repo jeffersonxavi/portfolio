@@ -114,10 +114,18 @@ header .content h1{
     line-height: 4rem;
 }
 
-header .content h1 span{
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px #fff;
+/* Estilizando o texto dentro do cabeçalho */
+header .content h1 span {
+    /* Torna o texto transparente com contorno branco */
+    /* -webkit-text-fill-color: transparent; */
+    -webkit-text-stroke: 1px #fff; /* Adiciona um contorno branco ao texto */
+    font-size: 1.5em; /* Define o tamanho da fonte */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    text-transform: uppercase; /* Converte o texto para maiúsculas */
+    text-shadow: 2px 2px 4px rgba(2, 2, 2, 0.5); /* Adiciona sombra ao texto */
 }
+
+
 
 header .content p{
     margin-bottom: 2rem;

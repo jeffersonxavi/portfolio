@@ -8,9 +8,15 @@
     box-sizing: border-box;
 }
 
-img{
-    width: 100%;
-    display: flex;
+img {
+    width: 70%;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+    opacity: 0.7; /* Torna a imagem 70% opaca */
 }
 
 a{
@@ -56,7 +62,7 @@ nav{
     width: 0;
     bottom: 0;
     left: 0;
-    background-color: #1d4ed8;
+    background-color: #f1f1f1;
     transition: all 0.3s ease;
 }
 
@@ -84,12 +90,6 @@ nav{
     padding: 5rem 2rem;
 }
 
-.blur{
-    position: absolute;
-    box-shadow: 0 0 1000px 50px #1d4ed8;
-    z-index: -100;
-}
-
 header{
     position: relative;
     padding-top: 2rem;
@@ -109,7 +109,7 @@ header .content h4{
 header .content h1{
     color: #fff;
     margin-bottom: 1rem;
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: 700;
     line-height: 4rem;
 }
@@ -118,8 +118,8 @@ header .content h1{
 header .content h1 span {
     /* Torna o texto transparente com contorno branco */
     /* -webkit-text-fill-color: transparent; */
-    -webkit-text-stroke: 1px #fff; /* Adiciona um contorno branco ao texto */
-    font-size: 1.5em; /* Define o tamanho da fonte */
+    -webkit-text-stroke: 1px rgb(0, 0, 0); /* Adiciona um contorno branco ao texto */
+    font-size: 0.8em; /* Define o tamanho da fonte */
     font-weight: bold; /* Define o peso da fonte como negrito */
     text-transform: uppercase; /* Converte o texto para maiúsculas */
     text-shadow: 2px 2px 4px rgba(2, 2, 2, 0.5); /* Adiciona sombra ao texto */
@@ -136,19 +136,6 @@ header .image{
     position: relative;
 }
 
-header .image::before{
-    content: "o";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 38rem;
-    font-weight: 400;
-    line-height: 20rem;
-    color: #1d4ed8;
-    opacity: 0.2;
-    z-index: -100;
-}
 
 header .image img{
     max-width: 600px;
@@ -220,6 +207,36 @@ section .header{
     text-align: center;
     color: #ccc;
 }
+
+.socials {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.socials a {
+    display: inline-block;
+    color: #555; /* Adjusted color for better readability */
+    background-color: #fff; /* Background color added */
+    border: 1px solid #000000;
+    padding: 8px 15px; /* Increased padding for better spacing */
+    font-size: 1rem; /* Adjusted font size */
+    border-radius: 20px; /* Adjusted border radius for a rounder shape */
+    transition: all 0.3s ease;
+    margin-right: 10px; /* Add margin-right for space between icons */
+    text-decoration: none; /* Remove default underline */
+}
+
+.socials a i {
+    margin-right: 8px; /* Adjusted space between icon and text */
+}
+
+.socials a:hover {
+    color: #fff;
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+
 
 
 footer{

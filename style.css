@@ -205,7 +205,6 @@ section .header{
 
 .features .card span{
     display: inline-block;
-    background-color: #1e40af;
     padding: 2px 9px;
     margin-bottom: 1rem;
     font-size: 1.75rem;
@@ -513,31 +512,52 @@ footer .column > a:hover{
     opacity: 1; /* Inicialmente visível */
 }
 
+.tech-title {
+    font-size: 0.9rem; /* Tamanho da fonte */
+    color: #ffffffb9; /* Cor do texto */
+    margin: 1rem 0; /* Espaço acima e abaixo do título */
+    text-align: center; /* Centraliza o texto */
+    font-weight: bold; /* Negrito */
+}
 
-/* Estilo para a seção das ferramentas utilizadas */
 .tools-used {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se necessário */
+    gap: 5px;
     margin-top: 1rem; /* Espaço acima dos ícones */
     padding-top: 0.5rem; /* Reduz o espaço interno */
-    border-top: 1px solid #1e40af; /* Linha divisória */
+    border-top: 1px solid #ffffff; /* Linha divisória */
 }
 
-.tools-used i {
-    font-size: 2rem; /* Tamanho dos ícones */
-    transition: transform 0.3s ease; /* Efeito de transição */
-}
-
-.tools-used i:hover {
-    transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
-}
-.tech-title {
-    font-size: 1rem; /* Aumenta o tamanho da fonte */
-    color: #ffffff; /* Muda a cor do texto para um azul mais escuro */
-    margin: 1rem 0; /* Espaço acima e abaixo do título */
+.tools-used .tool {
+    display: flex;
+    align-items: center; /* Alinha o ícone e o texto verticalmente no centro */
+    background-color: #ffffff; /* Fundo branco para os ícones */
+    border: 1px solid #000000; /* Bordas para destacar */
+    border-radius: 0px; /* Bordas arredondadas */
+    padding: 10px 5px; /* Reduz ainda mais o espaçamento interno */
+    transition: all 0.3s ease; /* Transição suave */
+    height: 30px; /* Define uma altura menor para o retângulo */
+    max-width: 110px; /* Limita a largura máxima de cada ícone */
     text-align: center; /* Centraliza o texto */
-    font-weight: bold; /* Deixa o texto em negrito */
 }
 
+.tools-used .tool i {
+    font-size: 1.1rem; /* Tamanho dos ícones */
+    margin-right: 5px; /* Espaço entre o ícone e o texto */
+}
 
+.tools-used .tool:hover {
+    background-color: #000000; /* Muda o fundo ao passar o mouse */
+}
+
+.tools-used .tool:hover i {
+    color: #ffffff; /* Muda a cor do ícone ao passar o mouse */
+}
+
+.tools-used .tool span {
+    margin: 0; /* Remove a margem do texto */
+    font-size: 0.7rem; /* Tamanho reduzido da fonte do texto */
+    color: #000000; /* Garante que a cor do texto seja preta */
+}

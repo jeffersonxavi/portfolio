@@ -27,22 +27,24 @@ link3.addEventListener('click', (event) => {
     scrollToElement('.column');
 });
 
-//Transição de imagens com bolinhas de navegação: 
-const dots = document.querySelectorAll('.dot');
-const images = document.querySelectorAll('.screenshots img');
-let currentIndex = 0;
+// Função para alterar a imagem com base no ponto (dot) clicado
+document.querySelectorAll('.features').forEach(feature => {
+    const dots = feature.querySelectorAll('.dot');
+    const images = feature.querySelectorAll('img');
 
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        images[currentIndex].classList.remove('active');
-        dots[currentIndex].classList.remove('active');
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            // Remove 'active' de todas as imagens e dots dentro do bloco atual
+            images.forEach(img => img.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
 
-        currentIndex = index;
-
-        images[currentIndex].classList.add('active');
-        dots[currentIndex].classList.add('active');
+            // Ativa a imagem e o dot clicado
+            images[index].classList.add('active');
+            dot.classList.add('active');
+        });
     });
 });
+
 
 //Exibição do ícone de rolagem
 document.addEventListener('DOMContentLoaded', function() {

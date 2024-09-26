@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
     <title>Portfólio - Jefferson Batista</title>
 </head>
+
 <body>
     <nav>
         <div class="nav-logo">
@@ -16,47 +19,96 @@
         </div>
 
         <ul class="nav-links">
-            <li class="link"><a href="#">Início</a></li>
-            <li id="link1" class="link"><a href="#">Projetos</a></li>
-            <li id="link2" class="link"><a href="#">Sobre</a></li>
-            <li id="link3" class="link"><a href="#">Contato</a></li>
+            <li class="link"><a href="#">INÍCIO</a></li>
+            <li id="link1" class="link"><a href="#">PROJETOS</a></li>
+            <li id="link2" class="link"><a href="#">SOBRE</a></li>
+            <li id="link3" class="link"><a href="#">CONTATO</a></li>
         </ul>
         <button></button>
         <!--<button class="btn">Contrate-me</button>  -->
     </nav>
-
     <header class="container">
         <div class="content">
             <h4></h4>
-            <H1><span>Jefferson Batista</span> Desenvolvedor Backend</H1>
-            <p>
-                Formado em Análise e Desenvolvimento de Sistemas
-            </p>
-           <!-- <button class="btn">Começar Agora</button> -->
+            <h1><span>Jefferson Batista</span> Desenvolvedor Backend</h1>
+            <p>Formado em Análise e Desenvolvimento de Sistemas</p>
+            <div class="scroll-icon">
+                <i class="ri-arrow-down-s-line"></i>
+            </div>
         </div>
-        <!--
-        <div class="image">
-            <img src="images/header.png" alt="Imagem de cabeçalho">
-        </div>
-        -->
-        
     </header>
+    
 
     <section class="container">
         <h2 class="header">MEUS PROJETOS</h2>
+        <!-- Primeiro Projeto: Saúde Tech -->
         <div class="features">
             <div class="card">
                 <span><i class="ri-hospital-line"></i></span>
-                <h4>SAÚDETECH</h4>
+                <h4>Saúde Tech</h4>
                 <p>
-                    Sistema Online construído em Laravel como parte de um TCC para gerenciar consultas e informações médicas, acessível a profissionais e pacientes, com funcionalidades de gestão de laudos médicos.
+                    Sistema web desenvolvido em Laravel durante o TCC, projetado para gerenciar consultas e informações médicas. Ele é acessível a profissionais e pacientes, oferecendo funcionalidades para a gestão de laudos médicos em PDF.
                 </p>
-                
-                <a target="_blank" href="https://youtu.be/AQNSldIrBlE">Saiba Mais <i class="ri-arrow-right-line"></i></a>
-                <!--
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/AQNSldIrBlE?si=5fSpi8a1AwPtNbLj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
-         -->
+                <div class="links">
+                    <a target="_blank" href="https://youtu.be/AQNSldIrBlE">
+                        <i class="ri-arrow-right-line"></i> Vídeo Demonstrativo
+                    </a>
+                    <a target="_blank" href="https://saudetech-production.up.railway.app/">
+                        <i class="ri-arrow-right-line"></i> Acessar Site
+                    </a>
+                </div>
+                <h5>Tecnologias Utilizadas:</h5>
+                <div class="tools-used">
+                    <i class="devicon-laravel-plain colored"></i>
+                    <i class="devicon-postgresql-plain colored"></i>
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                    <i class="devicon-php-plain colored"></i>
+                </div>
+            </div>
+            <div class="screenshots">
+                <img src="images/login4.png" alt="Screenshot 1" class="active">
+                <img src="images/dashboard-pos-consultas2.png" alt="Screenshot 2">
+                <div class="nav-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
         </div>
+        <!-- Segundo Projeto: Salão Star
+        <div class="features">
+            <div class="card">
+                <span><i class="ri-code-s-slash-line"></i></span>
+                <h4>Salão Star</h4>
+                <p>
+                    Breve descrição do novo projeto, destacando suas funcionalidades e tecnologias utilizadas. Descreva o que ele faz e para quem é voltado.
+                </p>
+                <div class="links">
+                    <a target="_blank" href="https://github.com/jeffersonxavi/salaostar-app">
+                        <i class="ri-arrow-right-line"></i> Acessar Repositório
+                    </a>
+                </div>
+                <h5>Tecnologias Utilizadas:</h5>
+                <div class="tools-used">
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                    <i class="devicon-php-plain colored"></i>
+                    <i class="devicon-mysql-plain colored"></i>
+                    <i class="devicon-nodejs-plain colored"></i>
+                </div>
+            </div>
+            <div class="screenshots">
+                <img src="images/screenshot-novo-projeto1.png" alt="Screenshot 1" class="active">
+                <img src="images/screenshot-novo-projeto2.png" alt="Screenshot 2">
+                <div class="nav-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+        -->
     </section>
 
     <section class="container">

@@ -473,16 +473,34 @@ footer .column > a:hover{
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.dot.active {
-    background-color: rgba(255, 255, 255, 1);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(0, 0, 0, 0.5);
 }
 
 .dot:hover {
+    transform: scale(1.2);
     background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
+
+.dot.active {
+    background-color: rgb(255, 255, 255); /* Destaque para o dot ativo */
+    animation: pulse 1.5s infinite; /* Animação de pulsação */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .scroll-indicator {
     margin-top: 20px; /* Espaçamento acima do ícone */
     font-size: 2rem; /* Tamanho do ícone */
@@ -536,10 +554,10 @@ footer .column > a:hover{
     background-color: #ffffff; /* Fundo branco para os ícones */
     border: 1px solid #000000; /* Bordas para destacar */
     border-radius: 0px; /* Bordas arredondadas */
-    padding: 10px 5px; /* Reduz ainda mais o espaçamento interno */
+    padding: 15px 3px; /* Reduz ainda mais o espaçamento interno */
     transition: all 0.3s ease; /* Transição suave */
     height: 30px; /* Define uma altura menor para o retângulo */
-    max-width: 110px; /* Limita a largura máxima de cada ícone */
+    max-width: 160px; /* Limita a largura máxima de cada ícone */
     text-align: center; /* Centraliza o texto */
 }
 

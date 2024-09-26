@@ -518,9 +518,9 @@ footer .column > a:hover{
 .tools-used {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 1rem;
-    padding-top: 1rem;
+    gap: 10px;
+    margin-top: 1rem; /* Espaço acima dos ícones */
+    padding-top: 0.5rem; /* Reduz o espaço interno */
     border-top: 1px solid #1e40af; /* Linha divisória */
 }
 
@@ -532,3 +532,12 @@ footer .column > a:hover{
 .tools-used i:hover {
     transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
 }
+.tech-title {
+    font-size: 1rem; /* Aumenta o tamanho da fonte */
+    color: #ffffff; /* Muda a cor do texto para um azul mais escuro */
+    margin: 1rem 0; /* Espaço acima e abaixo do título */
+    text-align: center; /* Centraliza o texto */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+

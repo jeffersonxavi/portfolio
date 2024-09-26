@@ -579,3 +579,13 @@ footer .column > a:hover{
     font-size: 0.7rem; /* Tamanho reduzido da fonte do texto */
     color: #000000; /* Garante que a cor do texto seja preta */
 }
+
+
+.screenshots-salao-star .nav-dots {
+    position: absolute; /* Mantenha como absolute */
+    bottom: 20px; /* Ajuste esse valor para mover os dots para baixo */
+    left: 50%; /* Para centralizar os dots */
+    transform: translateX(-50%); /* Ajuste para centralização correta */
+    display: flex;
+    gap: 10px;
+}

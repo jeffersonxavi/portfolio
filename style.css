@@ -23,19 +23,45 @@ a{
     text-decoration: none;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
     background-color: #18181B;
+    background-image: url('images/fundo3.png');
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Faz o fundo permanecer fixo ao rolar a página */
+    padding-top: 80px; /* Ajuste conforme a altura da barra de navegação */
+    
+    /* Overlay para adicionar o efeito de desfoque */
+    position: relative; /* Define o body como o contêiner para o overlay*/
 }
 
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.411); /* Escurece um pouco a imagem de fundo */
+    backdrop-filter: blur(0px); /* Aplica desfoque ao fundo */
+    z-index: -1; /* Garante que o overlay fique atrás do conteúdo */
+}
+
+
 nav{
-    max-width: 1200px;
-    margin: auto;
-    padding: 2rem 1rem;
+    position: fixed; /* Deixa a navegação fixa */
+    top: 0; /* Posiciona no topo da página */
+    left: 0; /* Alinha à esquerda */
+    right: 0; /* Alinha à direita */
+    padding: 1.4rem; /* Ajuste o padding se necessário */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 4rem;
+    background-color: #000; /* Fundo preto */
+    border-bottom: 2px solid #2894a7; /* Linha verde embaixo */
+    z-index: 1000; /* Garante que a navegação fique acima de outros elementos */
 }
 
 .nav-logo{
@@ -97,6 +123,13 @@ header{
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 2rem;
+    height: 100vh; /* Define a altura do cabeçalho para 100% da altura da tela */
+}
+
+/* auimentando altura do nav */
+.header {
+    padding-top: 80px; /* Adiciona espaço para a altura da navbar */
+    margin-top: -80px; /* Remove o espaço que a navbar cobre */
 }
 
 header .content h4{
@@ -153,7 +186,7 @@ section .header{
 .features{
     margin-top: 4rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Altera para que os cards se ajustem responsivamente */
     gap: 2rem;
 }
 
@@ -337,4 +370,165 @@ footer .column > a:hover{
     footer{
         grid-template-columns: 1fr 150px;
     }
+}
+
+.links {
+    margin-top: 1rem; /* Espaçamento superior para separar dos parágrafos */
+}
+
+.links a {
+    display: inline-block;
+    margin-right: 1rem; /* Espaçamento entre os links */
+    color: #6acfca !important; /* Cor verde dos links */
+    transition: color 0.3s ease; /* Transição suave */
+}
+
+.links a:hover {
+    color: #ffffff !important; /* Muda a cor para branco ao passar o mouse */
+}
+.screenshots {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    width: 250%; /* Largura total desejada */
+    height: 500px; /* Ajuste a altura conforme necessário */
+    border-radius: 15px; /* Arredondar bordas */
+
+}
+
+.screenshots img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto; /* Largura automática para evitar cortes */
+    height: 100%; /* Ajusta a altura para preencher o contêiner */
+    max-width: none;
+    object-fit: cover; /* Cobre o espaço sem distorcer */
+    display: none; /* Esconde todas as imagens inicialmente */
+    border-radius: 0; /* Remove bordas arredondadas */
+    transition: opacity 0.5s ease; /* Transição suave ao mostrar/esconder imagens */
+    border-radius: 15px; /* Arredondar bordas das imagens */
+
+}
+
+.screenshots img.active {
+    display: block; /* Mostra a imagem ativa */
+    opacity: 1; /* Define opacidade total para a imagem ativa */
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+    .screenshots {
+        width: 100%; /* Ajusta a largura para 100% em dispositivos móveis */
+        height: auto; /* Permite que a altura seja automática */
+    }
+
+    .screenshots img {
+        height: auto; /* Altura automática para manter a proporção */
+        width: 100%; /* Largura total em dispositivos móveis */
+        position: relative; /* Muda a posição para relativa */
+        top: 0; /* Reseta a posição vertical */
+        left: 0; /* Reseta a posição horizontal */
+        transform: none; /* Remove a transformação */
+    }
+}
+
+.nav-buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.nav-buttons button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #000;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-buttons button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: #1d4ed8;
+}
+
+.nav-dots {
+    position: absolute;
+    bottom: 94px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.dot:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.scroll-indicator {
+    margin-top: 20px; /* Espaçamento acima do ícone */
+    font-size: 2rem; /* Tamanho do ícone */
+    color: #fff; /* Cor do ícone */
+    animation: bounce 1.5s infinite; /* Efeito de bounce */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+.scroll-icon {
+    position: absolute;
+    bottom: 80px; /* Ajuste para que a seta fique acima do conteúdo */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 2rem;
+    transition: opacity 0.3s ease;
+    opacity: 1; /* Inicialmente visível */
+}
+
+
+/* Estilo para a seção das ferramentas utilizadas */
+.tools-used {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #1e40af; /* Linha divisória */
+}
+
+.tools-used i {
+    font-size: 2rem; /* Tamanho dos ícones */
+    transition: transform 0.3s ease; /* Efeito de transição */
+}
+
+.tools-used i:hover {
+    transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
 }
